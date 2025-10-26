@@ -1,0 +1,68 @@
+{
+	"i18n": true,
+	"type": "panel",
+	"items": {
+		"_info": {
+			"type": "header",
+			"text": "Connection Settings",
+			"size": 3
+		},
+		"deviceIp": {
+			"type": "text",
+			"label": "Device IP Address",
+			"placeholder": "192.168.4.1",
+			"newLine": true,
+			"sm": 8,
+			"help": "IP address of your Hailo Libero device (default: 192.168.4.1 when connected to device's WiFi)"
+		},
+		"devicePort": {
+			"type": "number",
+			"label": "Port",
+			"placeholder": "81",
+			"min": 1,
+			"max": 65535,
+			"newLine": false,
+			"sm": 4,
+			"help": "Port number (default: 81)"
+		},
+		"password": {
+			"type": "password",
+			"label": "Password",
+			"placeholder": "hailo",
+			"newLine": true,
+			"help": "Device password (default: hailo)"
+		},
+		"_polling": {
+			"type": "header",
+			"text": "Polling Settings",
+			"size": 3,
+			"newLine": true
+		},
+		"pollInterval": {
+			"type": "number",
+			"label": "Poll Interval (seconds)",
+			"min": 5,
+			"max": 300,
+			"placeholder": "30",
+			"newLine": true,
+			"help": "How often to check device status (5-300 seconds)"
+		},
+		"_test": {
+			"type": "header",
+			"text": "Connection Test",
+			"size": 3,
+			"newLine": true
+		},
+		"testConnection": {
+			"type": "sendto",
+			"command": "testConnection",
+			"jsonData": "{\"ip\": \"${data.deviceIp}\", \"port\": \"${data.devicePort}\", \"password\": \"${data.password}\"}",
+			"button": "Test Connection",
+			"variant": "contained",
+			"openUrl": false,
+			"window": "_self",
+			"newLine": true,
+			"width": "100%"
+		}
+	}
+}

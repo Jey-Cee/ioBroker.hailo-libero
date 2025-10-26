@@ -1,0 +1,87 @@
+{
+	"common": {
+		"name": "hailo-libero",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"titleLang": {
+			"en": "Hailo Libero",
+			"de": "Hailo Libero",
+			"ru": "Хайло Либеро",
+			"pt": "Hailo Líbero",
+			"nl": "Hallo Libero",
+			"fr": "Hailo Libéro",
+			"it": "Hailo Libero",
+			"es": "Hailo Libero",
+			"pl": "Witaj Libero",
+			"uk": "Хайло Ліберо",
+			"zh-cn": "海洛·利贝罗"
+		},
+		"desc": {
+			"en": "Control your Hailo Libero",
+			"de": "Steuern Sie Ihren Hailo Libero",
+			"ru": "Управляйте своим Хайло Либеро",
+			"pt": "Controle seu Hailo Libero",
+			"nl": "Bedien uw Hailo Libero",
+			"fr": "Contrôlez votre Hailo Libero",
+			"it": "Controlla il tuo Hailo Libero",
+			"es": "Controla tu Hailo Libero",
+			"pl": "Kontroluj swojego Hailo Libero",
+			"uk": "Керуйте своїм Hailo Libero",
+			"zh-cn": "控制你的 Hailo Libero"
+		},
+		"authors": ["jey-cee <iobroker@all-smart.net>"],
+		"keywords": ["Hailo Libero 3.0"],
+		"licenseInformation": {
+			"type": "free",
+			"license": "MIT"
+		},
+		"platform": "Javascript/Node.js",
+		"icon": "hailo-libero.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/jey-cee/ioBroker.hailo-libero/main/admin/hailo-libero.png",
+		"readme": "https://github.com/jey-cee/ioBroker.hailo-libero/blob/main/README.md",
+		"loglevel": "info",
+		"tier": 3,
+		"mode": "daemon",
+		"type": "household",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"messagebox": true,
+		"adminUI": {
+			"config": "json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=6.0.11"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": "7.0.23"
+			}
+		]
+	},
+	"native": {
+		"deviceIp": "192.168.4.1",
+		"devicePort": 81,
+		"password": "hailo",
+		"pollInterval": 30
+	},
+	"objects": [],
+	"instanceObjects": []
+}

@@ -1,0 +1,15 @@
+{
+	"hailo-libero adapter settings": "Adapter settings for Hailo Libero",
+	"Connection Settings": "Connection Settings",
+	"Device IP Address": "Device IP Address",
+	"IP address of your Hailo Libero device (default: 192.168.4.1 when connected to device's WiFi)": "IP address of your Hailo Libero device (default: 192.168.4.1 when connected to device's WiFi)",
+	"Port": "Port",
+	"Port number (default: 81)": "Port number (default: 81)",
+	"Password": "Password",
+	"Device password (default: hailo)": "Device password (default: hailo)",
+	"Polling Settings": "Polling Settings",
+	"Poll Interval (seconds)": "Poll Interval (seconds)",
+	"How often to check device status (5-300 seconds)": "How often to check device status (5-300 seconds)",
+	"Connection Test": "Connection Test",
+	"Test Connection": "Test Connection"
+}
