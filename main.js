@@ -378,7 +378,7 @@ class HailoLibero extends utils.Adapter {
 					}
 					break;
 
-				case "control.led":
+				case "control.led": {
 					this.log.info(`Setting LED to ${state.val ? "on" : "off"}`);
 					const ledSuccess = await this.client.setLED(state.val);
 					if (ledSuccess) {
@@ -387,8 +387,9 @@ class HailoLibero extends utils.Adapter {
 						this.log.error("Failed to set LED state");
 					}
 					break;
+				}
 
-				case "settings.sensitivity":
+				case "settings.sensitivity": {
 					this.log.info(`Setting sensor sensitivity to ${state.val}%`);
 					const sensSuccess = await this.client.setSensitivity(state.val);
 					if (sensSuccess) {
@@ -397,8 +398,9 @@ class HailoLibero extends utils.Adapter {
 						this.log.error("Failed to set sensitivity");
 					}
 					break;
+				}
 
-				case "settings.ejectionForce":
+				case "settings.ejectionForce": {
 					this.log.info(`Setting ejection force to ${state.val}%`);
 					const forceSuccess = await this.client.setEjectionForce(state.val);
 					if (forceSuccess) {
@@ -407,6 +409,7 @@ class HailoLibero extends utils.Adapter {
 						this.log.error("Failed to set ejection force");
 					}
 					break;
+				}
 
 				default:
 					this.log.debug(`Unhandled state change: ${stateName}`);
