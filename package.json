@@ -1,6 +1,6 @@
 {
   "name": "iobroker.hailo-libero",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Control your Hailo Libero",
   "author": {
     "name": "jey-cee",
@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.3.2",
-    "axios": "^1.12.2"
+    "axios": "^1.13.0",
+    "cheerio": "^1.1.2"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^5.0.0",
