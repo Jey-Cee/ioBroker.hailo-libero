@@ -117,7 +117,7 @@ Use this adapter at your own risk. The author takes no responsibility for any da
 ## License
 MIT License
 
-Copyright (c) 2025 jey-cee <iobroker@all-smart.net>
+Copyright (c) 2026 jey-cee <iobroker@all-smart.net>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
