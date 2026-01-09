@@ -9,18 +9,19 @@
   "homepage": "https://github.com/jey-cee/ioBroker.hailo-libero",
   "license": "MIT",
   "keywords": [
-    "Hailo Libero 3.0"
+	"Hailo Libero 3.0",
+	"ioBroker"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jey-cee/ioBroker.hailo-libero.git"
+    "url": "https://github.com/Jey-Cee/ioBroker.hailo-libero.git"
   },
   "engines": {
     "node": ">= 20"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.3.2",
-    "axios": "^1.13.0",
+    "axios": "^1.13.2",
     "cheerio": "^1.1.2"
   },
   "devDependencies": {
@@ -29,19 +30,9 @@
     "@alcalzone/release-script-plugin-license": "^4.0.0",
     "@alcalzone/release-script-plugin-manual-review": "^4.0.0",
     "@iobroker/adapter-dev": "^1.5.0",
-    "@iobroker/testing": "^5.1.1",
-    "@tsconfig/node20": "^20.1.6",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^20.19.23",
-    "@types/sinon": "^17.0.4",
-    "@types/sinon-chai": "^3.2.12",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "mocha": "^11.7.4",
-    "prettier": "^3.6.2",
-    "sinon": "^21.0.0",
-    "sinon-chai": "^3.7.0",
+    "@iobroker/testing": "^5.2.2",
+    "@tsconfig/node20": "^20.1.8",
+    "@types/node": "^25.0.3",
     "typescript": "~5.0.4"
   },
   "main": "main.js",
