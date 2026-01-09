@@ -47,14 +47,9 @@
 			"newLine": true,
 			"help": "How often to check device status (5-300 seconds)"
 		},
-		"_test": {
-			"type": "header",
-			"text": "Connection Test",
-			"size": 3,
-			"newLine": true
-		},
 		"testConnection": {
 			"type": "sendto",
+			"label": "Test Connection",
 			"command": "testConnection",
 			"jsonData": "{\"ip\": \"${data.deviceIp}\", \"port\": \"${data.devicePort}\", \"password\": \"${data.password}\"}",
 			"button": "Test Connection",

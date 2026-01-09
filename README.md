@@ -19,14 +19,15 @@ Control your Hailo Libero 3.0 smart bin opening system from ioBroker.
 The Hailo Libero 3.0 is an automatic, hands-free cabinet door opening system designed for waste bin cabinets. It uses a laser sensor to detect hand movement and automatically opens the cabinet door, providing a hygienic, touch-free solution for your kitchen.
 
 This adapter allows you to integrate and control your Hailo Libero 3.0 device within ioBroker.
+**Tested with firmware version 3.0.4**
 
 ## Features
 
 - **Automatic device discovery and connection** via local network
 - **Control cabinet door opening** remotely
-- **LED lighting control**
-- **Adjustable sensor sensitivity** (0-100%)
-- **Adjustable ejection force** (0-100%)
+- **LED brightness setting** (1-10)
+- **Adjustable sensor distance** (31-100mm)
+- **Adjustable ejection force** (1-10)
 - **Device status monitoring** with configurable polling interval
 - **Connection test** directly from admin interface
 - **Automatic reconnection** if device becomes unavailable
@@ -66,14 +67,11 @@ The adapter creates the following states:
 
 #### Control
 - `control.open` - Open the bin lid (button, write-only)
-- `control.led` - LED lighting on/off (boolean, read/write)
 
 #### Settings
-- `settings.sensitivity` - Sensor sensitivity 0-100% (number, read/write)
-- `settings.ejectionForce` - Ejection force 0-100% (number, read/write)
-
-#### Status
-- `status.lastUpdate` - Timestamp of last status update (number, read-only)
+- `settings.distance` - Sensor sensitivity 1-10 (number, read/write)
+- `settings.ejectionForce` - Ejection force 1-10 (number, read/write)
+- `settings.ledBrightness` - LED brightness 1-10 (number, read,write)
 
 ## Network Setup
 

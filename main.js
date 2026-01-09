@@ -40,7 +40,9 @@ class HailoLibero extends utils.Adapter {
 			return;
 		}
 
-		this.log.info(`Initializing Hailo Libero adapter for device at ${this.config.deviceIp}:${this.config.devicePort}`);
+		this.log.info(
+			`Initializing Hailo Libero adapter for device at ${this.config.deviceIp}:${this.config.devicePort}`,
+		);
 
 		// Create states for device control and monitoring
 		await this.createStates();
@@ -68,7 +70,19 @@ class HailoLibero extends utils.Adapter {
 		await this.setObjectNotExistsAsync("info.connection", {
 			type: "state",
 			common: {
-				name: "Device connection status",
+				name: {
+					en: "Device connection status",
+					de: "Geräteverbindungsstatus",
+					ru: "Статус подключения устройства",
+					pt: "Status de conexão do dispositivo",
+					nl: "Apparaat verbindingsstatus",
+					fr: "État de connexion de l'appareil",
+					it: "Stato connessione dispositivo",
+					es: "Estado de conexión del dispositivo",
+					pl: "Status połączenia urządzenia",
+					uk: "Статус підключення пристрою",
+					"zh-cn": "设备连接状态"
+				},
 				type: "boolean",
 				role: "indicator.connected",
 				read: true,
@@ -81,7 +95,19 @@ class HailoLibero extends utils.Adapter {
 		await this.setObjectNotExistsAsync("control.open", {
 			type: "state",
 			common: {
-				name: "Open bin lid",
+				name: {
+					en: "Open bin lid",
+					de: "Deckel öffnen",
+					ru: "Открыть крышку",
+					pt: "Abrir tampa",
+					nl: "Deksel openen",
+					fr: "Ouvrir le couvercle",
+					it: "Apri coperchio",
+					es: "Abrir tapa",
+					pl: "Otwórz pokrywę",
+					uk: "Відкрити кришку",
+					"zh-cn": "打开盖子"
+				},
 				type: "boolean",
 				role: "button",
 				read: false,
@@ -90,29 +116,43 @@ class HailoLibero extends utils.Adapter {
 			native: {},
 		});
 
-		// LED control
-		await this.setObjectNotExistsAsync("control.led", {
+		// LED brightness
+		await this.setObjectNotExistsAsync("settings.ledBrightness", {
 			type: "state",
 			common: {
-				name: "LED lighting",
-				type: "boolean",
-				role: "switch",
+				name: "LED brightness",
+				type: "number",
+				role: "level.dimmer",
+				min: 1,
+				max: 10,
 				read: true,
 				write: true,
 			},
 			native: {},
 		});
 
-		// Sensor sensitivity
-		await this.setObjectNotExistsAsync("settings.sensitivity", {
+		// Sensor distance
+		await this.setObjectNotExistsAsync("settings.distance", {
 			type: "state",
 			common: {
-				name: "Sensor sensitivity",
+				name: {
+					en: "Sensor distance",
+					de: "Sensorabstand",
+					ru: "Расстояние датчика",
+					pt: "Distância do sensor",
+					nl: "Sensorafstand",
+					fr: "Distance du capteur",
+					it: "Distanza sensore",
+					es: "Distancia del sensor",
+					pl: "Odległość czujnika",
+					uk: "Відстань датчика",
+					"zh-cn": "传感器距离"
+				},
 				type: "number",
 				role: "level",
-				min: 0,
+				min: 31,
 				max: 100,
-				unit: "%",
+				unit: "mm",
 				read: true,
 				write: true,
 			},
@@ -123,12 +163,23 @@ class HailoLibero extends utils.Adapter {
 		await this.setObjectNotExistsAsync("settings.ejectionForce", {
 			type: "state",
 			common: {
-				name: "Ejection force",
+				name: {
+					en: "Ejection force",
+					de: "Auswurfkraft",
+					ru: "Сила выброса",
+					pt: "Força de ejeção",
+					nl: "Uitwerpkracht",
+					fr: "Force d'éjection",
+					it: "Forza di espulsione",
+					es: "Fuerza de eyección",
+					pl: "Siła wyrzutu",
+					uk: "Сила викиду",
+					"zh-cn": "弹出力"
+				},
 				type: "number",
 				role: "level",
-				min: 0,
-				max: 100,
-				unit: "%",
+				min: 1,
+				max: 10,
 				read: true,
 				write: true,
 			},
@@ -139,7 +190,19 @@ class HailoLibero extends utils.Adapter {
 		await this.setObjectNotExistsAsync("info.firmware", {
 			type: "state",
 			common: {
-				name: "Firmware version",
+				name: {
+					en: "Firmware version",
+					de: "Firmware-Version",
+					ru: "Версия прошивки",
+					pt: "Versão do firmware",
+					nl: "Firmwareversie",
+					fr: "Version du firmware",
+					it: "Versione firmware",
+					es: "Versión de firmware",
+					pl: "Wersja oprogramowania",
+					uk: "Версія прошивки",
+					"zh-cn": "固件版本"
+				},
 				type: "string",
 				role: "info.firmware",
 				read: true,
@@ -151,7 +214,19 @@ class HailoLibero extends utils.Adapter {
 		await this.setObjectNotExistsAsync("info.model", {
 			type: "state",
 			common: {
-				name: "Device model",
+				name: {
+					en: "Device model",
+					de: "Gerätemodell",
+					ru: "Модель устройства",
+					pt: "Modelo do dispositivo",
+					nl: "Apparaatmodel",
+					fr: "Modèle d'appareil",
+					it: "Modello dispositivo",
+					es: "Modelo del dispositivo",
+					pl: "Model urządzenia",
+					uk: "Модель пристрою",
+					"zh-cn": "设备型号"
+				},
 				type: "string",
 				role: "info.name",
 				read: true,
@@ -159,21 +234,6 @@ class HailoLibero extends utils.Adapter {
 			},
 			native: {},
 		});
-
-		// Status information
-		await this.setObjectNotExistsAsync("status.lastUpdate", {
-			type: "state",
-			common: {
-				name: "Last status update",
-				type: "number",
-				role: "value.time",
-				read: true,
-				write: false,
-			},
-			native: {},
-		});
-
-		this.log.debug("All states created successfully");
 	}
 
 	/**
@@ -222,13 +282,15 @@ class HailoLibero extends utils.Adapter {
 	 */
 	async updateDeviceInfo() {
 		try {
-			const info = await this.client.getDeviceInfo();
-			if (info) {
-				if (info.firmware) {
-					await this.setState("info.firmware", { val: info.firmware, ack: true });
+			const deviceInfo = await this.client.getDeviceInfo();
+			if (deviceInfo) {
+				this.log.info("Found device info");
+				if (deviceInfo.info.firmware) {
+					this.log.info(`Device firmware version: ${deviceInfo.info.firmware}`);
+					await this.setState("info.firmware", { val: deviceInfo.info.firmware, ack: true });
 				}
-				if (info.model) {
-					await this.setState("info.model", { val: info.model, ack: true });
+				if (deviceInfo.info.device) {
+					await this.setState("info.model", { val: deviceInfo.info.device, ack: true });
 				}
 			}
 		} catch (error) {
@@ -241,20 +303,17 @@ class HailoLibero extends utils.Adapter {
 	 */
 	async updateDeviceStatus() {
 		try {
-			const status = await this.client.getStatus();
-			if (status) {
-				// Update states based on status response
-				if (status.led !== undefined) {
-					await this.setState("control.led", { val: status.led, ack: true });
+			const settings = await this.client.readSettings();
+			if (settings) {
+				if (settings.led !== undefined) {
+					await this.setState("settings.ledBrightness", { val: settings.led.value, ack: true });
 				}
-				if (status.sensitivity !== undefined) {
-					await this.setState("settings.sensitivity", { val: status.sensitivity, ack: true });
+				if (settings.dist !== undefined) {
+					await this.setState("settings.distance", { val: settings.dist.value, ack: true });
 				}
-				if (status.ejectionForce !== undefined) {
-					await this.setState("settings.ejectionForce", { val: status.ejectionForce, ack: true });
+				if (settings.pwr !== undefined) {
+					await this.setState("settings.ejectionForce", { val: settings.pwr.value, ack: true });
 				}
-
-				await this.setState("status.lastUpdate", { val: Date.now(), ack: true });
 			}
 		} catch (error) {
 			this.log.debug(`Could not get device status: ${error.message}`);
@@ -270,7 +329,6 @@ class HailoLibero extends utils.Adapter {
 		}
 
 		const interval = (this.config.pollInterval || 30) * 1000;
-		this.log.debug(`Starting polling with interval ${interval}ms`);
 
 		this.pollInterval = this.setInterval(async () => {
 			if (this.isConnected) {
@@ -328,23 +386,6 @@ class HailoLibero extends utils.Adapter {
 		}
 	}
 
-	// If you need to react to object changes, uncomment the following block and the corresponding line in the constructor.
-	// You also need to subscribe to the objects with `this.subscribeObjects`, similar to `this.subscribeStates`.
-	// /**
-	//  * Is called if a subscribed object changes
-	//  * @param {string} id
-	//  * @param {ioBroker.Object | null | undefined} obj
-	//  */
-	// onObjectChange(id, obj) {
-	// 	if (obj) {
-	// 		// The object was changed
-	// 		this.log.info(`object ${id} changed: ${JSON.stringify(obj)}`);
-	// 	} else {
-	// 		// The object was deleted
-	// 		this.log.info(`object ${id} deleted`);
-	// 	}
-	// }
-
 	/**
 	 * Is called if a subscribed state changes
 	 * @param {string} id
@@ -360,16 +401,14 @@ class HailoLibero extends utils.Adapter {
 		const idParts = id.split(".");
 		const stateName = idParts.slice(2).join(".");
 
-		this.log.debug(`State change: ${stateName} = ${state.val}`);
-
 		try {
 			switch (stateName) {
 				case "control.open":
 					if (state.val) {
-						this.log.info("Opening bin lid...");
+						this.log.debug("Opening bin lid...");
 						const success = await this.client.openLid();
 						if (success) {
-							this.log.info("Bin lid opened successfully");
+							this.log.debug("Bin lid opened successfully");
 							// Reset button state
 							await this.setState("control.open", { val: false, ack: true });
 						} else {
@@ -378,35 +417,38 @@ class HailoLibero extends utils.Adapter {
 					}
 					break;
 
-				case "control.led": {
-					this.log.info(`Setting LED to ${state.val ? "on" : "off"}`);
-					const ledSuccess = await this.client.setLED(state.val);
-					if (ledSuccess) {
-						await this.setState("control.led", { val: state.val, ack: true });
-					} else {
-						this.log.error("Failed to set LED state");
+				case "settings.ledBrightness":
+				case "settings.ejectionForce":
+				case "settings.distance": {
+					if (!this.client) {
+						this.log.error("Client is not initialized");
+						return;
 					}
-					break;
-				}
 
-				case "settings.sensitivity": {
-					this.log.info(`Setting sensor sensitivity to ${state.val}%`);
-					const sensSuccess = await this.client.setSensitivity(state.val);
-					if (sensSuccess) {
-						await this.setState("settings.sensitivity", { val: state.val, ack: true });
-					} else {
-						this.log.error("Failed to set sensitivity");
-					}
-					break;
-				}
+					// Hole alle aktuellen Werte
+					const ledState = await this.getStateAsync("settings.ledBrightness");
+					const forceState = await this.getStateAsync("settings.ejectionForce");
+					const distanceState = await this.getStateAsync("settings.distance");
 
-				case "settings.ejectionForce": {
-					this.log.info(`Setting ejection force to ${state.val}%`);
-					const forceSuccess = await this.client.setEjectionForce(state.val);
-					if (forceSuccess) {
-						await this.setState("settings.ejectionForce", { val: state.val, ack: true });
+					// Bestimme welcher Wert geändert wurde und verwende die aktuellen Werte für die anderen
+					const ledValue = stateName === "settings.ledBrightness" ? Number(state.val) : (ledState?.val ? Number(ledState.val) : 5);
+					const forceValue = stateName === "settings.ejectionForce" ? Number(state.val) : (forceState?.val ? Number(forceState.val) : 5);
+					const distanceValue = stateName === "settings.distance" ? Number(state.val) : (distanceState?.val ? Number(distanceState.val) : 50);
+
+					const success = await this.client.writeSettings({
+						led: ledValue,
+						pwr: forceValue,
+						dist: distanceValue
+					});
+
+					if (success) {
+						// Bestätige alle drei Werte
+						await this.setState("settings.ledBrightness", { val: ledValue, ack: true });
+						await this.setState("settings.ejectionForce", { val: forceValue, ack: true });
+						await this.setState("settings.distance", { val: distanceValue, ack: true });
+						this.log.debug("All settings updated successfully");
 					} else {
-						this.log.error("Failed to set ejection force");
+						this.log.error("Failed to update settings");
 					}
 					break;
 				}
@@ -481,7 +523,6 @@ class HailoLibero extends utils.Adapter {
 			}
 		}
 	}
-
 }
 
 if (require.main !== module) {
