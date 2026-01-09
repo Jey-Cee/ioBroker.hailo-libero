@@ -110,8 +110,7 @@ Use this adapter at your own risk. The author takes no responsibility for any da
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.0.0 (2026-01-09)
 * (jey-cee) initial release
 
 ## License

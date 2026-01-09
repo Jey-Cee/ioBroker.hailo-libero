@@ -1,6 +1,6 @@
 {
   "name": "iobroker.hailo-libero",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Control your Hailo Libero",
   "author": {
     "name": "jey-cee",
