@@ -1,6 +1,6 @@
 {
   "name": "iobroker.hailo-libero",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Control your Hailo Libero",
   "author": {
     "name": "jey-cee",
@@ -9,8 +9,8 @@
   "homepage": "https://github.com/jey-cee/ioBroker.hailo-libero",
   "license": "MIT",
   "keywords": [
-	"Hailo Libero 3.0",
-	"ioBroker"
+    "Hailo Libero 3.0",
+    "ioBroker"
   ],
   "repository": {
     "type": "git",
