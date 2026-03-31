@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "hailo-libero",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "news": {
+      "1.0.2": {
+        "en": "fix linting issues",
+        "de": "lining probleme beheben",
+        "ru": "исправить проблемы с подкладкой",
+        "pt": "corrigir problemas de linting",
+        "nl": "fix linting problemen",
+        "fr": "correction des problèmes de doublage",
+        "it": "risolvere i problemi di integrazione",
+        "es": "solucionar problemas de revestimiento",
+        "pl": "rozwiązać problemy z układaniem",
+        "uk": "виправити проблеми linting",
+        "zh-cn": "解决嵌入式问题"
+      },
       "1.0.1": {
         "en": "update dependencies\nautomate release",
         "de": "aktualisierung der abhängigkeiten\nautomatenfreigabe",
