@@ -110,7 +110,7 @@ Use this adapter at your own risk. The author takes no responsibility for any da
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.3 (2026-03-31)
 * fix linting issue
 
 ### 1.0.2 (2026-03-31)
