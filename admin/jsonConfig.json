@@ -17,7 +17,7 @@
 			"md": 7,
 			"lg": 6,
 			"xl": 5,
-			"help": "IP address of your Hailo Libero device (default: 192.168.4.1 when connected to device's WiFi)",
+			"help": "IP address of your Hailo Libero device (default: 192.168.4.1 when connected to device's WiFi)"
 		},
 		"devicePort": {
 			"type": "number",
