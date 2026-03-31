@@ -108,7 +108,7 @@
     "platform": "Javascript/Node.js",
     "icon": "hailo-libero.png",
     "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/jey-cee/ioBroker.hailo-libero/main/admin/hailo-libero.png",
+    "extIcon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.hailo-libero/refs/heads/master/admin/hailo-libero.png",
     "readme": "https://github.com/jey-cee/ioBroker.hailo-libero/blob/main/README.md",
     "loglevel": "info",
     "tier": 3,
