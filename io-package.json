@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "hailo-libero",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "news": {
+      "1.0.4": {
+        "en": "* Bump typescript from 5.9.3 to 6.0.2\n* Bump actions/checkout from 4 to 6\n* Bump actions/setup-node from 4 to 6\n* corrected extIcon URL",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "Обновлены зависимости",
+        "pt": "Dependências atualizadas",
+        "nl": "Afhankelijkheden bijgewerkt",
+        "fr": "Dépendances mises à jour",
+        "it": "Dipendenze aggiornate",
+        "es": "Dependencias actualizadas",
+        "pl": "Zaktualizowano zależności",
+        "uk": "Оновлено залежності",
+        "zh-cn": "更新依赖"
+      },
       "1.0.3": {
         "en": "fix linting issue",
         "de": "fix lining problem",

@@ -110,6 +110,12 @@ Use this adapter at your own risk. The author takes no responsibility for any da
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### 1.0.4 (2026-04-03)
+* Bump typescript from 5.9.3 to 6.0.2
+* Bump actions/checkout from 4 to 6
+* Bump actions/setup-node from 4 to 6
+* corrected extIcon URL
+
 ### 1.0.3 (2026-03-31)
 * fix linting issue
 
