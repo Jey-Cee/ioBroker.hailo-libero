@@ -110,6 +110,10 @@ Use this adapter at your own risk. The author takes no responsibility for any da
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### 1.0.5 (2026-06-03)
+* Bump axios from 1.14.0 to 1.15.2
+* Bump typescript from 6.0.2 to 6.0.3
+
 ### 1.0.4 (2026-04-03)
 * Bump typescript from 5.9.3 to 6.0.2
 * Bump actions/checkout from 4 to 6
